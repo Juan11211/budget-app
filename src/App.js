@@ -30,6 +30,7 @@ function App() {
     <>
     <div className="App">
      <Container className='my-4'> 
+     {/* Stack is items in the container */}
       <Stack direction='horizontal' gap='2' className='mb-4'>
         <h1 className='me-auto'>Budget</h1>
         <Button onClick={() => setShowAddBudgetModal(true)} variant='primary'>Add Budget</Button>
@@ -42,6 +43,7 @@ function App() {
               (total, expense) => total + expense.amount,
               0
             )
+            // this is the budget card. could view expenses
           return ( 
         <BudgetCard 
         key={budget.id}
